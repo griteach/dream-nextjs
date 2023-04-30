@@ -1,23 +1,4 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 8px;
-  border-bottom: 1 solid black;
-}
-
-.nav a {
-  padding: 0 8px;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  padding: 8px;
-  border: 1px solid white;
-}
-.menu div {
-  padding: 0 8px;
 }
