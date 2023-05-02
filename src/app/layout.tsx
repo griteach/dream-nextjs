@@ -1,7 +1,16 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { parseJsonSourceFileConfigFileContent } from "typescript";
 import "./globals.css";
 import styles from "./layout.module.css";
+
+export const metadata: Metadata = {
+  title: "Dev Note",
+  description: "My Dev Note",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,
