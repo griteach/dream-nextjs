@@ -1,7 +1,8 @@
+import { getProducts } from "@/api/products";
 import Link from "next/link";
 
 export default function ProductsPage() {
-  const products = ["shirt", "pants", "skirt", "shoes"];
+  const products = getProducts();
   return (
     <>
       <h1>제품 소개 페이지</h1>
