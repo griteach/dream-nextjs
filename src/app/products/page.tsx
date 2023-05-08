@@ -1,18 +1,25 @@
 import { getProducts } from "@/api/products";
+import MeowArticle from "@/components/MeowArticle";
 import Link from "next/link";
 
-export default function ProductsPage() {
-  const products = getProducts();
+export const revalidate = 3;
+
+export default async function ProductsPage() {
+  const products = await getProducts();
+
   return (
     <>
       <h1>제품 소개 페이지</h1>
       <ul>
-        {products.map((product) => (
-          <li key={product}>
-            <Link href={`/products/${product}`}>{product}</Link>
+        {products.map(({ id, name }, index) => (
+          <li key={index}>
+            <Link href={`/products/${id}`}>{name}</Link>
           </li>
         ))}
       </ul>
+      <div>
+        <MeowArticle />
+      </div>
     </>
   );
 }
