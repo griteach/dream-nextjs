@@ -6,6 +6,7 @@ import styles from "./MeowArticle.module.css";
 export default function MeowArticle() {
   const [text, setText] = useState("Loading...");
 
+  //맛만 봤다 아입니꺼.
   useEffect(() => {
     fetch("https://meowfacts.herokuapp.com", {
       next: { revalidate: 0 },
