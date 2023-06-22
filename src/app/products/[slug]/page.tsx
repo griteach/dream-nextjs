@@ -1,4 +1,5 @@
 import { getProduct, getProducts } from "@/api/products";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 export const revalidate = 3;
@@ -24,6 +25,12 @@ export default async function ProductPage({ params: { slug } }: Props) {
     <>
       <h1>{product.name}설명페이지</h1>
       <p>가격: {product.price}</p>
+      <Image
+        src={`/images/${product.image}`}
+        alt={`${product.name}`}
+        width={300}
+        height={300}
+      />
     </>
   );
 }

@@ -17,6 +17,12 @@ export default function Home() {
     <>
       <h1>homepage</h1>
       <Counter />
+      <Image
+        src={`https://images.unsplash.com/photo-1605028241606-ca01277aa15c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+        width={400}
+        height={400}
+        alt="street"
+      />
     </>
   );
 }
